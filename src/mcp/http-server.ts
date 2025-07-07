@@ -14,7 +14,7 @@ import { OpenAPIParser } from '../utils/openapi-parser.js';
 import { generateAnalytics } from '../utils/analytics.js';
 import { EndpointData, OpenAPISpec } from '../types/openapi.js';
 
-class OpenAPIExplorerHTTPServer {
+export class OpenAPIExplorerHTTPServer {
   private app: express.Application;
   private server: Server;
   private parser: OpenAPIParser;

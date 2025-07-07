@@ -11,7 +11,7 @@ import { OpenAPIParser } from '../utils/openapi-parser.js';
 import { generateAnalytics } from '../utils/analytics.js';
 import { EndpointData, OpenAPISpec } from '../types/openapi.js';
 
-class OpenAPIExplorerMCPServer {
+export class OpenAPIExplorerMCPServer {
   private server: Server;
   private parser: OpenAPIParser;
   private currentSpec: OpenAPISpec | null = null;

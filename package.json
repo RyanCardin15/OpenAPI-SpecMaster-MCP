@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "MCP server for OpenAPI-Spec-Master",
   "type": "module",
-  "main": "dist/cli.js",
+  "main": "dist/index.js",
   "bin": {
-    "openapi-spec-master-mcp": "dist/cli.js"
+    "openapi-spec-master-mcp": "dist/index.js"
   },
   "scripts": {
     "build": "tsc",
-    "start": "node dist/cli.js mcp"
+    "start": "node dist/index.js"
   },
   "author": {
     "name": "Ryan Cardin",
