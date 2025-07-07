@@ -9,14 +9,14 @@ Welcome to the **OpenAPI Spec Master MCP Server**! This server provides a powerf
 Get up and running in a flash with `npx`:
 
 ```bash
-npx openapi-spec-master-mcp@latest
+npx @ryancardin/openapi-spec-master-mcp@latest
 ```
 
 This command fires up the MCP server using the **STDIO** transport by default. This is ideal for local development and integration with tools that use standard input/output.
 
 For remote access or use cases requiring an HTTP interface, you can start the server in HTTP mode:
 ```bash
-npx openapi-spec-master-mcp@latest http
+npx @ryancardin/openapi-spec-master-mcp@latest http
 ```
 
 ## ⚙️ Configuration ⚙️
@@ -32,17 +32,17 @@ You can configure the server using command-line arguments and environment variab
 
 **Running with STDIO (default):**
 ```bash
-npx openapi-spec-master-mcp@latest
+npx @ryancardin/openapi-spec-master-mcp@latest
 ```
 
 **Running with HTTP:**
 ```bash
-npx openapi-spec-master-mcp@latest http
+npx @ryancardin/openapi-spec-master-mcp@latest http
 ```
 
 **Running with a specific port for HTTP:**
 ```bash
-PORT=8080 npx openapi-spec-master-mcp@latest http
+PORT=8080 npx @ryancardin/openapi-spec-master-mcp@latest http
 ```
 
 ## 🛠️ Tools 🛠️
