@@ -54,11 +54,7 @@ export class OpenAPIExplorerHTTPServer {
     this.app.use(express.json({ limit: '10mb' }));
     this.app.use(express.urlencoded({ extended: true }));
 
-    // Request logging
-    this.app.use((req, res, next) => {
-      console.log(`${new Date().toISOString()} - ${req.method} ${req.path}`);
-      next();
-    });
+    // Request logging removed
   }
 
   private setupRoutes() {
@@ -505,8 +501,6 @@ export class OpenAPIExplorerHTTPServer {
   }
 
   private handleError(res: express.Response, error: any) {
-    console.error('HTTP Server Error:', error);
-    
     if (error instanceof McpError) {
       res.status(400).json({
         error: {
@@ -1041,10 +1035,7 @@ console.log(data);`;
 
   public start() {
     this.app.listen(this.port, () => {
-      console.log(`🚀 OpenAPI Explorer MCP HTTP Server running on port ${this.port}`);
-      console.log(`📖 Documentation: http://localhost:${this.port}/docs`);
-      console.log(`🔍 Health check: http://localhost:${this.port}/health`);
-      console.log(`📡 Streaming: http://localhost:${this.port}/mcp/stream`);
+      // Server started silently
     });
   }
 }

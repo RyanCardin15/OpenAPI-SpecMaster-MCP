@@ -2115,9 +2115,10 @@ ${Object.entries(analytics.complexityDistribution)
   async run() {
     const transport = new StdioServerTransport();
     await this.server.connect(transport);
-    console.error('OpenAPI Explorer MCP Server running on stdio');
   }
 }
 
 const server = new OpenAPIExplorerMCPServer();
-server.run().catch(console.error);
+server.run().catch(() => {
+  // Silent error handling
+});
